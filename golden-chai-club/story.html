@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Our Story — The Golden Chai Club</title>
+  <meta name="description" content="How the Golden Chai Club began: a research scientist and health coach, a move to Dubai, and a few coffee meetups that grew into a community of like-minded women.">
+  <meta property="og:title" content="Our Story — The Golden Chai Club">
+  <meta property="og:image" content="images/host.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .story-hero{padding:150px 0 clamp(70px,9vw,120px);background:var(--cream)}
+    .story-hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,7vw,100px);align-items:center}
+    .portrait{position:relative}
+    .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:200px 200px var(--radius) var(--radius);box-shadow:0 40px 70px -35px rgba(59,42,31,.5)}
+    .portrait figcaption{position:absolute;left:-14px;bottom:34px;background:var(--paper);padding:16px 22px;border-radius:14px;box-shadow:0 14px 30px -14px rgba(59,42,31,.35)}
+    .portrait figcaption b{display:block;font:500 24px/1.1 var(--serif);color:var(--cocoa)}
+    .portrait figcaption span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--chai)}
+    .story-hero h1{font-size:clamp(46px,6.4vw,84px);margin:18px 0 26px}
+    .story-hero h1 em{font-style:italic;color:var(--chai)}
+    .story-hero .big{font:italic 400 clamp(22px,2.3vw,28px)/1.45 var(--serif);color:var(--cocoa)}
+    @media(max-width:880px){.story-hero .wrap{grid-template-columns:1fr}.portrait{max-width:460px}.portrait figcaption{left:14px}}
+
+    .chapters{max-width:760px;margin:0 auto}
+    .chapter{display:grid;grid-template-columns:90px 1fr;gap:28px;padding:44px 0;border-bottom:1px solid var(--line)}
+    .chapter:last-child{border-bottom:0}
+    .chapter .num{font:italic 500 52px/1 var(--serif);color:var(--gold)}
+    .chapter h2{font-size:clamp(30px,3.4vw,42px);margin-bottom:16px}
+    .chapter p{color:#4d4138}
+    @media(max-width:600px){.chapter{grid-template-columns:1fr;gap:6px}}
+
+    .pull{background:var(--cocoa);color:var(--cream);text-align:center}
+    .pull blockquote{margin:0 auto;max-width:900px;font:italic 400 clamp(30px,4.2vw,52px)/1.25 var(--serif)}
+    .pull blockquote em{color:#e9c88c}
+    .pull cite{display:block;margin-top:26px;font:500 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;font-style:normal;color:var(--gold)}
+
+    .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
+    .strip img{aspect-ratio:3/4;object-fit:cover;border-radius:16px;width:100%}
+    @media(max-width:700px){.strip{grid-template-columns:repeat(2,1fr)}}
+
+    .core{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+    .core div{background:var(--cream);border-radius:var(--radius);padding:34px 30px}
+    .core h3{font-size:28px;margin-bottom:10px}
+    .core p{color:var(--muted);font-size:15.5px;margin:0}
+    @media(max-width:820px){.core{grid-template-columns:1fr}}
+
+    .letter{background:var(--cream);text-align:center}
+    .letter p.sign{font:italic 500 40px/1 var(--serif);color:var(--chai);margin:30px 0 40px}
+  </style>
+</head>
+<body>
+
+<header id="top" class="scrolled">
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="index.html">The Golden <span>Chai</span> Club</a>
+    <div class="navlinks">
+      <a href="index.html#about">About</a>
+      <a href="story.html" aria-current="page">Our Story</a>
+      <a href="index.html#gatherings">Gatherings</a>
+      <a href="index.html#events">Events</a>
+      <a class="btn" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="story-hero">
+    <div class="wrap">
+      <figure class="portrait reveal" style="margin:0">
+        <img src="images/host.jpg" alt="Tanisha Vedhara, founder of the Golden Chai Club, seated in a white shirt" fetchpriority="high">
+        <figcaption><b>Tanisha Vedhara</b><span>Founder</span></figcaption>
+      </figure>
+      <div class="reveal">
+        <span class="eyebrow">Our story · Meet the founder</span>
+        <h1>It all started with <em>a coffee.</em></h1>
+        <p class="big">“I was looking for a community that didn't exist yet — so, one coffee invitation at a time, we built it together.”</p>
+        <p>I'm Tanisha — a research scientist and health coach, and the founder of the Golden Chai Club.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap chapters">
+      <article class="chapter reveal">
+        <span class="num">01</span>
+        <div>
+          <h2>A new chapter, a new city</h2>
+          <p>My career began in research science, and over time I found myself drawn to the human side of health — how we eat, move, rest and think. So I did something both terrifying and exciting: I pivoted. I became a health coach, and around the same time I packed up my life and moved to Dubai.</p>
+          <p>New city. New career. New me. Anyone who has reinvented themselves knows how thrilling — and how lonely — that can feel.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">02</span>
+        <div>
+          <h2>Looking for my people</h2>
+          <p>I went searching for a community where I could keep learning, meet like-minded women and keep growing my mindset. I wanted to be around women who uplift each other because they're <em>doing</em> something — building, creating, healing, starting over — and who love to collaborate rather than compete.</p>
+          <p>I found networking events, and I found social circles. But a space that brought it all together — knowledge, warmth, wellness and real connection? That, I couldn't find.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">03</span>
+        <div>
+          <h2>A few coffee invitations</h2>
+          <p>So I started small. I sent out a few requests for a coffee meetup. Just a table, a few cups and some honest conversation.</p>
+          <p>Then something wonderful happened. More women came — women with the same energy, the same curiosity, the same quiet longing for something deeper. One coffee became another, and another, until the table simply wasn't big enough anymore.</p>
+        </div>
+      </article>
+
+      <article class="chapter reveal">
+        <span class="num">04</span>
+        <div>
+          <h2>And here we are</h2>
+          <p>Today, the Golden Chai Club is a growing circle of women making new connections over activities, workshops, beach walks, breathwork, bingo cards and plenty of laughter.</p>
+          <p>But at its heart it's simple: we have fun, and every woman leaves her cup of chai having learned something new about her own wellness. That's the core of everything we do.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="pull">
+    <div class="wrap reveal">
+      <blockquote>“Come for the chai and the conversation. <em>Leave a little more educated, connected and inspired.</em>”</blockquote>
+      <cite>Tanisha Vedhara · Founder</cite>
+      <div class="strip">
+        <img src="images/beach-selfie.jpg" alt="Tanisha and members on a beach walk" loading="lazy">
+        <img src="images/conversation.jpg" alt="Members in conversation" loading="lazy">
+        <img src="images/breathwork-room.jpg" alt="A breathwork session" loading="lazy">
+        <img src="images/mingle.jpg" alt="Members mingling at a gathering" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head reveal" style="margin-bottom:0">
+        <div>
+          <span class="eyebrow">What the club stands for</span>
+          <h2 style="margin-top:16px">Connection, with <em>a purpose.</em></h2>
+        </div>
+        <p>Everything we create is built around three simple promises — the same things I was searching for when I first arrived.</p>
+      </div>
+      <div class="core">
+        <div class="reveal"><h3>Learn</h3><p>Every gathering leaves you with something real — on wellness, health, mindset and growth — from women who know their stuff.</p></div>
+        <div class="reveal"><h3>Connect</h3><p>Uplifting, like-minded women who are building something of their own, and who show up for each other.</p></div>
+        <div class="reveal"><h3>Collaborate</h3><p>Friendships that turn into ideas, partnerships and projects. When women pool their energy, everyone rises.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="letter">
+    <div class="wrap reveal" style="max-width:720px">
+      <span class="eyebrow">An invitation</span>
+      <h2 style="margin:16px 0 26px">If you feel <em>aligned…</em></h2>
+      <p>If you've read this far and found yourself nodding, you're probably one of us. Whether you've just landed in Dubai, are in the middle of your own reinvention, or simply want to be around women who lift you higher — there's a seat at the table for you.</p>
+      <p>I would genuinely love to meet you.</p>
+      <p class="sign">— Tanisha</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join →</a>
+        <a class="btn ghost" href="index.html#events">See upcoming events</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="index.html">The Golden <span>Chai</span> Club</a>
+    <div>A community for women · Dubai · <a href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join</a></div>
+    <div>© <span id="yr">2026</span> The Golden Chai Club</div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
