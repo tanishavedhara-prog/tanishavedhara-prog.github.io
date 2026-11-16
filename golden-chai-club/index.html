@@ -3,427 +3,144 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>The Golden Chai Club — a community for women who are growing, gathering &amp; reinventing</title>
-  <meta name="description" content="The Golden Chai Club is a community for women in Dubai: intimate tables, honest conversation, breathwork, beach walks and workshops. Apply to join and grab a seat at our upcoming events.">
-  <meta property="og:title" content="The Golden Chai Club">
-  <meta property="og:description" content="A community for women who are growing, gathering &amp; reinventing. Apply to join and see upcoming events.">
+  <title>The Golden Chai Club — a community for women in Dubai</title>
+  <meta name="description" content="A community for women in Dubai: honest conversations, wellness, workshops and walks over chai. Become a part of it and see upcoming events.">
+  <meta property="og:title" content="The Golden Chai Club — a community for women in Dubai">
+  <meta property="og:description" content="A community for women in Dubai: honest conversations, wellness, workshops and walks over chai. Become a part of it and see upcoming events.">
   <meta property="og:image" content="images/group.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --cream:#f7f1e7; --paper:#fbf8f2; --sand:#ecdfcb; --chai:#b07a45; --gold:#c39a52;
-      --cocoa:#3b2a1f; --ink:#2a211b; --muted:#6f6257; --line:#e2d5c1;
-      --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-      --sans:'Jost','Helvetica Neue',Arial,sans-serif;
-      --radius:22px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%}
-    a{color:inherit}
-    .wrap{width:min(1180px,100% - 40px);margin-inline:auto}
-    .eyebrow{font:500 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--chai)}
-    h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;color:var(--cocoa)}
-    h2{font-size:clamp(38px,5.4vw,64px)}
-    h2 em,h1 em{font-style:italic;color:var(--chai)}
-    p{margin:0 0 1em}
-    .btn{display:inline-flex;align-items:center;gap:.6em;padding:15px 28px;border-radius:999px;background:var(--cocoa);color:var(--cream);text-decoration:none;font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;transition:transform .25s,background .25s}
-    .btn:hover{background:var(--chai);transform:translateY(-2px)}
-    .btn.ghost{background:transparent;color:var(--cocoa);border:1px solid var(--cocoa)}
-    .btn.ghost:hover{background:var(--cocoa);color:var(--cream)}
-    .btn.light{background:var(--cream);color:var(--cocoa)}
-    .btn.light:hover{background:var(--gold);color:var(--cocoa)}
-    :focus-visible{outline:2px solid var(--chai);outline-offset:4px}
-
-    /* nav */
-    header{position:fixed;inset:0 0 auto;z-index:20;transition:background .3s,box-shadow .3s}
-    header.scrolled{background:rgba(251,248,242,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
-    nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-    .logo{font:italic 500 26px/1 var(--serif);text-decoration:none;color:var(--cream);transition:color .3s}
-    .logo span{font-style:normal;color:var(--gold)}
-    header.scrolled .logo{color:var(--cocoa)}
-    .navlinks{display:flex;gap:30px;align-items:center}
-    .navlinks a{text-decoration:none;font:400 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
-    header.scrolled .navlinks a{color:var(--cocoa)}
-    .navlinks .btn{padding:12px 20px;background:var(--cream);color:var(--cocoa)!important}
-    header.scrolled .navlinks .btn{background:var(--cocoa);color:var(--cream)!important}
-    @media(max-width:820px){.navlinks a:not(.btn){display:none}}
-
-    /* hero */
-    .hero{position:relative;min-height:100svh;display:grid;align-items:end;color:var(--cream);overflow:hidden}
-    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.04);animation:drift 18s ease-out forwards}
-    @keyframes drift{to{transform:scale(1)}}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,24,16,.82) 0%,rgba(36,24,16,.55) 50%,rgba(36,24,16,.2) 100%),linear-gradient(180deg,rgba(36,24,16,.45) 0%,transparent 30%,rgba(36,24,16,.6) 100%)}
-    @media(max-width:700px){.hero::after{background:rgba(36,24,16,.68)}}
-    .hero .wrap{position:relative;z-index:1;padding:140px 0 90px}
-    .hero .eyebrow{color:var(--gold)}
-    .hero h1{color:var(--cream);font-size:clamp(54px,9vw,128px);font-weight:400;margin:18px 0 22px;letter-spacing:-.01em}
-    .hero h1 em{color:#e9c88c}
-    .hero p.lede{max-width:560px;font-size:clamp(17px,1.6vw,20px);color:#f3e9da;margin-bottom:34px}
-    .hero .actions{display:flex;gap:14px;flex-wrap:wrap}
-    .hero .btn.ghost{color:var(--cream);border-color:rgba(247,241,231,.7)}
-    .hero .btn.ghost:hover{background:var(--cream);color:var(--cocoa)}
-
-    section{padding:clamp(80px,11vw,140px) 0}
-
-    /* about */
-    .about{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,100px);align-items:center}
-    .about .photos{position:relative;aspect-ratio:4/5}
-    .about .photos img{position:absolute;object-fit:cover;border-radius:var(--radius);box-shadow:0 30px 60px -30px rgba(59,42,31,.45)}
-    .about .photos .a{inset:0 22% 12% 0;width:78%;height:88%}
-    .about .photos .b{right:0;bottom:0;width:48%;aspect-ratio:3/4;height:auto;border:8px solid var(--paper)}
-    .about h2{margin:18px 0 28px}
-    .about .big{font:italic 400 clamp(22px,2.2vw,27px)/1.45 var(--serif);color:var(--cocoa)}
-    .sig{margin-top:30px;padding-top:26px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .sig b{display:block;font:500 34px/1 var(--serif);color:var(--chai)}
-    .sig span{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-    @media(max-width:880px){.about{grid-template-columns:1fr}.about .photos{max-width:520px}}
-
-    /* pillars */
-    .pillars{background:var(--cream)}
-    .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-    .head p{max-width:430px;color:var(--muted);margin:0}
-    .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-    .pillar{background:var(--paper);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s}
-    .pillar:hover{transform:translateY(-6px)}
-    .pillar img{aspect-ratio:4/5;object-fit:cover;width:100%}
-    .pillar div{padding:24px 24px 28px}
-    .pillar small{font:500 11px/1 var(--sans);letter-spacing:.24em;color:var(--chai)}
-    .pillar h3{font-size:28px;margin:10px 0 10px}
-    .pillar p{font-size:15px;color:var(--muted);margin:0}
-    @media(max-width:1000px){.grid4{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.grid4{grid-template-columns:1fr}}
-
-    /* quote band */
-    .band{position:relative;padding:clamp(110px,14vw,180px) 0;color:var(--cream);text-align:center;overflow:hidden}
-    .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-    .band::after{content:"";position:absolute;inset:0;background:rgba(42,28,18,.62)}
-    .band .wrap{position:relative;z-index:1;max-width:900px}
-    .band blockquote{margin:0;font:italic 400 clamp(30px,4.4vw,54px)/1.2 var(--serif)}
-    .band cite{display:block;margin-top:24px;font:500 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;font-style:normal;color:var(--gold)}
-
-    /* events */
-    .events-list{display:grid;gap:18px}
-    .event{display:grid;grid-template-columns:150px 1fr auto;gap:clamp(20px,4vw,48px);align-items:center;padding:30px clamp(22px,3vw,40px);background:var(--cream);border-radius:var(--radius);border:1px solid transparent;transition:border-color .3s,transform .3s,background .3s}
-    .event:hover{border-color:var(--gold);background:#f4ead9;transform:translateX(4px)}
-    .date{text-align:center;border-right:1px solid var(--line);padding-right:clamp(16px,3vw,40px)}
-    .date b{display:block;font:500 64px/.9 var(--serif);color:var(--cocoa)}
-    .date span{font:500 12px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--chai)}
-    .date i{display:block;font:400 12px/1 var(--sans);font-style:normal;color:var(--muted);margin-top:8px;letter-spacing:.1em}
-    .event h3{font-size:clamp(26px,2.8vw,34px);margin-bottom:8px}
-    .event p{color:var(--muted);margin:0;font-size:15.5px;max-width:560px}
-    .tag{display:inline-block;margin-bottom:10px;padding:5px 12px;border-radius:999px;background:var(--paper);font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--chai)}
-    .event.soon .tag{background:var(--cocoa);color:var(--cream)}
-    .note{margin-top:28px;text-align:center;color:var(--muted);font-size:15px}
-    .none{display:none;text-align:center;padding:50px;background:var(--cream);border-radius:var(--radius)}
-    @media(max-width:760px){
-      .event{grid-template-columns:1fr;text-align:left}
-      .date{text-align:left;border-right:0;border-bottom:1px solid var(--line);padding:0 0 16px;display:flex;align-items:baseline;gap:12px}
-      .date b{font-size:48px}.date i{margin:0}
-      .event .btn{justify-self:start}
-    }
-
-    /* gallery */
-    .gallery{background:var(--cocoa);color:var(--cream)}
-    .gallery h2{color:var(--cream)}
-    .gallery .head p{color:#cdbca6}
-    .masonry{columns:4 240px;column-gap:16px}
-    .masonry figure{margin:0 0 16px;break-inside:avoid;border-radius:16px;overflow:hidden;cursor:zoom-in}
-    .masonry img{width:100%;transition:transform .6s,filter .6s;filter:saturate(.92)}
-    .masonry figure:hover img{transform:scale(1.04);filter:saturate(1.05)}
-    dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh}
-    dialog::backdrop{background:rgba(20,14,10,.9)}
-    dialog img{max-width:92vw;max-height:88vh;border-radius:12px}
-    dialog button{position:fixed;top:18px;right:22px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer;line-height:1}
-
-    /* join */
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:56px 0 54px;counter-reset:s}
-    .step{padding:36px 30px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);position:relative}
-    .step::before{counter-increment:s;content:"0" counter(s);font:italic 500 46px/1 var(--serif);color:var(--gold);display:block;margin-bottom:18px}
-    .step h3{font-size:28px;margin-bottom:10px}
-    .step p{color:var(--muted);font-size:15.5px;margin:0}
-    @media(max-width:820px){.steps{grid-template-columns:1fr}}
-    .join{text-align:center}
-    .join .head{justify-content:center;text-align:center;flex-direction:column;align-items:center;margin-bottom:0}
-    .join .head p{margin-top:18px}
-    .who{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:820px;margin:0 auto 46px}
-    .who span{padding:9px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--cocoa);background:var(--cream)}
-
-    /* cta */
-    .cta{position:relative;color:var(--cream);overflow:hidden;text-align:center}
-    .cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
-    .cta::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,24,16,.55),rgba(36,24,16,.78))}
-    .cta .wrap{position:relative;z-index:1}
-    .cta h2{color:var(--cream);font-size:clamp(44px,7vw,92px);margin:16px 0 22px}
-    .cta h2 em{color:#e9c88c}
-    .cta p{max-width:520px;margin:0 auto 34px;color:#f3e9da}
-    .cta .eyebrow{color:var(--gold)}
-
-    footer{background:var(--ink);color:#bfae98;padding:46px 0;font-size:14px}
-    footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-    footer .logo{color:var(--cream)}
-    footer a{color:#e9c88c;text-decoration:none}
-
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
-    .reveal.in{opacity:1;transform:none}
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header id="top">
+<header>
   <nav class="wrap" aria-label="Main">
-    <a class="logo" href="#">The Golden <span>Chai</span> Club</a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#gatherings">Gatherings</a>
-      <a href="#events">Events</a>
-      <a href="#moments">Moments</a>
-      <a class="btn" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply</a>
+    <a class="logo" href="index.html"><b>G</b>golden_chai_club</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="navlinks">MENU</button>
+    <div class="navlinks" id="navlinks">
+      <a href="story.html">Meet the founder</a>
+      <a href="index.html#events">Upcoming events</a>
+      <a href="index.html#contact">Contact us</a>
+      <a class="btn" href="index.html#join">Become a part of it →</a>
     </div>
   </nav>
 </header>
-
 <main>
-  <section class="hero" aria-label="Welcome">
-    <img src="images/group.jpg" alt="Members of the Golden Chai Club gathered together, smiling, in a sunlit room" fetchpriority="high">
+
+  <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">A community for women · Dubai</span>
-      <h1>Pull up a chair.<br><em>Pour the chai.</em></h1>
-      <p class="lede">The Golden Chai Club is a circle of women who gather to talk honestly, grow intentionally and reinvent themselves together — one warm table at a time.</p>
-      <div class="actions">
-        <a class="btn light" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join →</a>
-        <a class="btn ghost" href="#events">Upcoming events</a>
+      <div class="reveal">
+        <span class="tag">a community for women · dubai</span>
+        <h1 class="type xl">The Golden Chai Club</h1>
+        <p class="lede">Like-minded women gathering over chai to connect, learn about wellness and grow — one table at a time.</p>
+        <div class="meta"><span>conversations</span><span>wellness</span><span>workshops</span><span>walks</span></div>
+        <div class="actions">
+          <a class="btn" href="#join">Become a part of it →</a>
+          <a class="btn ghost" href="#events">Upcoming events</a>
+        </div>
+      </div>
+      <div class="collage reveal" data-m style="--ar:1/1.02;--mar:1/1.1">
+        <figure class="frame " style="--x:0%;--y:6%;--w:64%;--ia:4/3;--r:-3deg;--z:2;--mx:0%;--my:4%;--mw:70%"><div class="bar"><i></i><i></i><i></i><span>the_circle.jpg</span></div><img src="images/group-zoom.jpg" alt="Members of the Golden Chai Club smiling together" loading="lazy"></figure>
+        <figure class="frame " style="--x:58%;--y:2%;--w:40%;--ia:4/3;--r:4deg;--z:3;--mx:56%;--my:2%;--mw:44%"><div class="bar"><i></i><i></i><i></i><span>chai_break.jpg</span></div><img src="images/coffee-zoom.jpg" alt="Coffee cups and glasses on a wooden table" loading="lazy"></figure>
+        <figure class="frame " style="--x:6%;--y:46%;--w:32%;--ia:3/4;--r:3deg;--z:4;--mx:2%;--my:46%;--mw:36%"><div class="bar"><i></i><i></i><i></i><span>breathe.jpg</span></div><img src="images/breathwork.jpg" alt="A member during a breathwork session" loading="lazy"></figure>
+        <figure class="frame " style="--x:40%;--y:50%;--w:34%;--ia:4/5;--r:-4deg;--z:5;--mx:38%;--my:52%;--mw:36%"><div class="bar"><i></i><i></i><i></i><span>beach_walk.jpg</span></div><img src="images/beach-selfie.jpg" alt="Members on a beach walk" loading="lazy"></figure>
+        <figure class="frame " style="--x:74%;--y:50%;--w:24%;--ia:4/5;--r:7deg;--z:6;--mx:72%;--my:56%;--mw:27%"><div class="bar"><i></i><i></i><i></i><span>reinvention_bingo.jpg</span></div><img src="images/bingo-zoom.jpg" alt="Close-up of a Reinvention Bingo card" loading="lazy"></figure>
+        <div class="stamp" style="--x:78%;--y:26%;--w:19%" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="c7826" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><circle cx="50" cy="50" r="48" stroke-width="1"/><text><textPath href="#c7826">chai · talk · grow · dubai · chai · talk · grow ·</textPath></text><text x="50" y="58" text-anchor="middle" style="font:500 24px 'Playfair Display',serif;fill:#5b0f1e;letter-spacing:0">G</text></svg></div>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="wrap about">
-      <div class="photos reveal">
-        <img class="a" src="images/conversation.jpg" alt="Three women deep in conversation at a Golden Chai Club gathering" loading="lazy">
-        <img class="b" src="images/smile.jpg" alt="A member smiling during a table conversation" loading="lazy">
+  <section id="about" style="padding-top:0">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="tag">what it is</span>
+        <h2 class="type">Connection with purpose</h2>
       </div>
       <div class="reveal">
-        <span class="eyebrow">What we're about</span>
-        <h2>Real women. Real tables. <em>Real conversations.</em></h2>
-        <p class="big">Somewhere between the school run, the boardroom and everything we carry, we stopped making time for each other. The Golden Chai Club is where we make it again.</p>
-        <p>We are a curated community of women at every stage of life — founders, mothers, creatives, professionals and women in the middle of reinventing who they are. We meet over chai in beautiful spaces for intimate tables, expert-led sessions, breathwork, creative workshops and sunrise walks by the sea.</p>
-        <p>No networking pressure, no performance — just warmth, curiosity and women who genuinely show up for one another.</p>
-        <div class="sig">
-          <div><b>Gather</b><span>Intimate tables</span></div>
-          <div><b>Grow</b><span>Learn &amp; reflect</span></div>
-          <div><b>Glow</b><span>Body &amp; soul</span></div>
-        </div>
+        <p>Founders, mothers, creatives and women in the middle of reinventing themselves — meeting in beautiful spaces for fun, honest conversation and real wellness education.</p>
+        <p style="color:var(--muted)">No networking pressure. Just uplifting women, new collaborations and leaving every chai a little wiser.</p>
+        <div class="chips"><span>Honest conversations</span><span>Breathwork</span><span>Reinvention bingo</span><span>Wellness talks</span><span>Creative workshops</span><span>Beach walks</span></div>
       </div>
     </div>
   </section>
 
-  <section class="pillars" id="gatherings">
+  <section class="dark" id="events">
     <div class="wrap">
-      <div class="head reveal">
-        <div>
-          <span class="eyebrow">How we gather</span>
-          <h2 style="margin-top:16px">Every gathering <em>feels different.</em></h2>
-        </div>
-        <p>From candid panel conversations to silent breathwork, playful icebreakers to beach walks — every experience is designed to leave you a little lighter and a lot more connected.</p>
+      <div class="ev-head reveal">
+        <div><span class="tag">upcoming events</span><h2 class="type">Coming up next</h2></div>
+        <p class="muted">Spaces are limited to keep every gathering intimate. Members get the booking links first.</p>
       </div>
-      <div class="grid4">
-        <article class="pillar reveal">
-          <img src="images/panel.jpg" alt="A panel conversation with members listening around the room" loading="lazy">
-          <div><small>THE TABLE</small><h3>Honest conversations</h3><p>Intimate talks and panels with inspiring women on reinvention, resilience, visibility and the stories we rarely say out loud.</p></div>
+      <div class="events">
+        <article class="event" data-date="2026-11-19">
+          <div class="d">19.11<small>thu · november</small></div>
+          <div><h3>The Visibility Table — Be Seen</h3><p><span class="live">limited seats</span> · owning your voice, story and space</p></div>
         </article>
-        <article class="pillar reveal">
-          <img src="images/breathwork.jpg" alt="A member with an eye mask and headphones during a breathwork session" loading="lazy">
-          <div><small>THE PAUSE</small><h3>Breath &amp; wellbeing</h3><p>Guided breathwork, nervous-system resets and soul-and-body sessions — a rare hour that is entirely yours.</p></div>
+        <article class="event" data-date="2026-11-25">
+          <div class="d">25.11<small>wed · november</small></div>
+          <div><h3>Soul &amp; Body Connection</h3><p><span class="live">limited seats</span> · slow down, breathe, reconnect</p></div>
         </article>
-        <article class="pillar reveal">
-          <img src="images/bingo.jpg" alt="A Reinvention Bingo card filled in with names during an icebreaker" loading="lazy">
-          <div><small>THE SPARK</small><h3>Play &amp; connection</h3><p>Reinvention Bingo and thoughtful icebreakers that turn a room of strangers into friends before the chai goes cold.</p></div>
+        <article class="event" data-date="2026-12-05">
+          <div class="d">05.12<small>sat · december</small></div>
+          <div><h3>The Modern Calligraphy Workshop</h3><p><span class="live">limited seats</span> · hands-on and mindful, no experience needed</p></div>
         </article>
-        <article class="pillar reveal">
-          <img src="images/beach-group.jpg" alt="Members standing together on the beach under a blue sky after a walk" loading="lazy">
-          <div><small>THE MOVE</small><h3>Walks &amp; workshops</h3><p>Beach walks, metabolic socials and hands-on creative workshops — because growth happens in the body, too.</p></div>
+        <article class="event" data-date="2026-12-10">
+          <div class="d">10.12<small>thu · december</small></div>
+          <div><h3>Metabolic Social 2.0</h3><p><span class="live">limited seats</span> · energy, hormones and nourishment</p></div>
         </article>
+      </div>
+      <p class="none">&gt; new gatherings are brewing — become a part of it to hear first.</p>
+      <div class="ev-join reveal">
+        <p>&gt; booking links are shared inside our members' WhatsApp community.</p>
+        <a class="btn" href="#join">Join the club →</a>
       </div>
     </div>
   </section>
 
-  <section class="band" aria-label="Our belief">
-    <img src="images/breathwork-room.jpg" alt="" loading="lazy">
-    <div class="wrap reveal">
-      <blockquote>“When women gather with intention, something golden happens.”</blockquote>
-      <cite>The Golden Chai Club</cite>
-    </div>
-  </section>
-
-  <section id="events">
+  <section id="moments">
     <div class="wrap">
-      <div class="head reveal">
-        <div>
-          <span class="eyebrow">Upcoming events</span>
-          <h2 style="margin-top:16px">Save your seat <em>at the table.</em></h2>
-        </div>
-        <p>Spaces are intentionally limited to keep every gathering intimate — so please grab your seat early. 📍</p>
+      <div class="reveal" style="margin-bottom:30px"><span class="tag">moments</span><h2 class="type">From our tables</h2></div>
+      <div class="collage reveal" data-m style="--ar:16/9;--mar:1/1.42">
+        <figure class="frame " style="--x:0%;--y:4%;--w:32%;--ia:4/3;--r:-2deg;--z:2;--mx:0%;--my:1%;--mw:60%"><div class="bar"><i></i><i></i><i></i><span>panel_talk.jpg</span></div><img src="images/panel.jpg" alt="A panel conversation with members listening" loading="lazy"></figure>
+        <figure class="frame " style="--x:36%;--y:2%;--w:28%;--ia:4/3;--r:2deg;--z:3;--mx:40%;--my:12%;--mw:58%"><div class="bar"><i></i><i></i><i></i><span>in_conversation.jpg</span></div><img src="images/conversation.jpg" alt="Members in conversation" loading="lazy"></figure>
+        <figure class="frame " style="--x:4%;--y:50%;--w:17%;--ia:3/4;--r:3deg;--z:5;--mx:4%;--my:30%;--mw:34%"><div class="bar"><i></i><i></i><i></i><span>mingle.jpg</span></div><img src="images/mingle.jpg" alt="Members mingling around a book display" loading="lazy"></figure>
+        <figure class="frame " style="--x:24%;--y:38%;--w:17%;--ia:3/4;--r:-3deg;--z:6;--mx:34%;--my:44%;--mw:32%"><div class="bar"><i></i><i></i><i></i><span>listening.jpg</span></div><img src="images/listening.jpg" alt="A member listening intently" loading="lazy"></figure>
+        <figure class="frame " style="--x:62%;--y:8%;--w:17%;--ia:3/4;--r:-5deg;--z:4;--mx:62%;--my:34%;--mw:34%"><div class="bar"><i></i><i></i><i></i><span>laughter.jpg</span></div><img src="images/smile.jpg" alt="A member laughing during a conversation" loading="lazy"></figure>
+        <figure class="frame hide-m" style="--x:77%;--y:20%;--w:21%;--ia:3/4;--r:3deg;--z:3"><div class="bar"><i></i><i></i><i></i><span>silent_breath.jpg</span></div><img src="images/breathwork-room.jpg" alt="A room of women during breathwork" loading="lazy"></figure>
+        <figure class="frame " style="--x:48%;--y:46%;--w:17%;--ia:3/4;--r:6deg;--z:7;--mx:28%;--my:66%;--mw:36%"><div class="bar"><i></i><i></i><i></i><span>beach_crew.jpg</span></div><img src="images/beach-group.jpg" alt="Members together on the beach" loading="lazy"></figure>
       </div>
-
-      <div class="events-list" id="eventsList">
-        <article class="event reveal" data-date="2026-11-19">
-          <div class="date"><b>19</b><span>November</span><i>Thursday</i></div>
-          <div>
-            <span class="tag">Limited spaces</span>
-            <h3>The Visibility Table — Be Seen</h3>
-            <p>An intimate table on stepping out of the background — owning your voice, your story and your space, and finally letting yourself be seen.</p>
-          </div>
-          <a class="btn" href="https://luma.com/cscuzxjk" target="_blank" rel="noopener">Reserve →</a>
-        </article>
-
-        <article class="event reveal" data-date="2026-11-25">
-          <div class="date"><b>25</b><span>November</span><i>Wednesday</i></div>
-          <div>
-            <span class="tag">Limited spaces</span>
-            <h3>Soul &amp; Body Connection</h3>
-            <p>A gentle, restorative session to slow down, breathe and reconnect what you feel with what you carry — mind, body and soul.</p>
-          </div>
-          <a class="btn" href="https://luma.com/3fggr2d4" target="_blank" rel="noopener">Reserve →</a>
-        </article>
-
-        <article class="event reveal" data-date="2026-12-05">
-          <div class="date"><b>05</b><span>December</span><i>Saturday</i></div>
-          <div>
-            <span class="tag">Limited spaces</span>
-            <h3>The Modern Calligraphy Workshop</h3>
-            <p>A hands-on creative morning learning the art of modern calligraphy — slow, mindful and beautifully analogue. No experience needed.</p>
-          </div>
-          <a class="btn" href="https://luma.com/r7ai2r2k" target="_blank" rel="noopener">Reserve →</a>
-        </article>
-
-        <article class="event reveal" data-date="2026-12-10">
-          <div class="date"><b>10</b><span>December</span><i>Thursday</i></div>
-          <div>
-            <span class="tag">Limited spaces</span>
-            <h3>Metabolic Social 2.0</h3>
-            <p>Our metabolic health social is back — real talk on energy, hormones and nourishment, shared with women who get it.</p>
-          </div>
-          <a class="btn" href="https://luma.com/058l92d1" target="_blank" rel="noopener">Reserve →</a>
-        </article>
-      </div>
-
-      <div class="none" id="noEvents">
-        <h3 style="font-size:32px;margin-bottom:10px">New gatherings are brewing.</h3>
-        <p style="color:var(--muted)">Apply to join the club and you'll be the first to hear when the next table opens.</p>
-        <a class="btn" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join →</a>
-      </div>
-      <p class="note">Bookings are handled on Luma. Members hear about new events first in our WhatsApp community.</p>
     </div>
   </section>
 
-  <section class="gallery" id="moments">
+  <section class="burgundy" id="join">
     <div class="wrap">
-      <div class="head reveal">
-        <div>
-          <span class="eyebrow" style="color:var(--gold)">Moments</span>
-          <h2 style="margin-top:16px">From our <em style="color:#e9c88c">tables.</em></h2>
-        </div>
-        <p>Laughter, stillness, bingo cards and sandy sneakers — a few glimpses of what happens when we gather.</p>
+      <div class="reveal"><span class="tag">become a part of it</span><h2 class="type">Your seat is waiting</h2></div>
+      <div class="steps reveal" style="color:var(--ink)">
+        <div class="step"><b>[01]</b><h3>Apply</h3><p>Fill in a short form about you.</p></div>
+        <div class="step"><b>[02]</b><h3>We review</h3><p>Every application is read personally.</p></div>
+        <div class="step"><b>[03]</b><h3>Welcome in</h3><p>You get the link to our WhatsApp community.</p></div>
       </div>
-      <div class="masonry" id="masonry">
-        <figure><img src="images/beach-selfie.jpg" alt="A beach selfie of smiling members in sunglasses" loading="lazy"></figure>
-        <figure><img src="images/conversation.jpg" alt="Three members talking animatedly" loading="lazy"></figure>
-        <figure><img src="images/host.jpg" alt="A member in a white shirt listening thoughtfully" loading="lazy"></figure>
-        <figure><img src="images/breathwork-room.jpg" alt="A room of women with eye masks and headphones during breathwork" loading="lazy"></figure>
-        <figure><img src="images/coffee.jpg" alt="Two members at a table with coffee, one smiling at her phone" loading="lazy"></figure>
-        <figure><img src="images/panel.jpg" alt="A full room listening to a panel conversation" loading="lazy"></figure>
-        <figure><img src="images/listening.jpg" alt="A member listening intently at a gathering" loading="lazy"></figure>
-        <figure><img src="images/mingle.jpg" alt="Members mingling around a table displaying books" loading="lazy"></figure>
-        <figure><img src="images/smile.jpg" alt="A member laughing during a conversation" loading="lazy"></figure>
-        <figure><img src="images/bingo.jpg" alt="A hand holding a filled-in Reinvention Bingo card" loading="lazy"></figure>
-        <figure><img src="images/breathwork.jpg" alt="A member during a breathwork session" loading="lazy"></figure>
-        <figure><img src="images/beach-group.jpg" alt="Members together on the beach" loading="lazy"></figure>
-      </div>
+      <a class="btn reveal" style="background:var(--paper);color:var(--black);border-color:var(--paper)" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join →</a>
     </div>
   </section>
 
-  <section class="join" id="join">
+  <section class="dark" id="contact">
     <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">How to join</span>
-        <h2 style="margin-top:16px">Your seat is <em>waiting.</em></h2>
-        <p>The Golden Chai Club is an application-based community, so every woman in the room is there because she truly wants to be.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal"><h3>Apply</h3><p>Fill in our short application form and tell us a little about you, what you're navigating and what you hope to find here.</p></div>
-        <div class="step reveal"><h3>We review</h3><p>We read every application personally to keep the community warm, intentional and safe for everyone.</p></div>
-        <div class="step reveal"><h3>Welcome in</h3><p>Once accepted, you'll receive the private link to our WhatsApp community — where invites, events and conversations live.</p></div>
-      </div>
-      <div class="who reveal" aria-label="Who the club is for">
-        <span>Founders &amp; entrepreneurs</span><span>Working women</span><span>Mothers</span><span>Creatives</span><span>Women in transition</span><span>New to the city</span><span>Simply curious</span>
-      </div>
-      <a class="btn reveal" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Start your application →</a>
-    </div>
-  </section>
-
-  <section class="cta">
-    <img src="images/beach-group.jpg" alt="" loading="lazy">
-    <div class="wrap reveal">
-      <span class="eyebrow">The kettle's on</span>
-      <h2>Come as you are.<br><em>Leave a little golden.</em></h2>
-      <p>Apply to become a member, or grab a seat at one of our upcoming gatherings.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a class="btn light" href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join</a>
-        <a class="btn ghost" style="color:var(--cream);border-color:rgba(247,241,231,.7)" href="#events">See events</a>
+      <div class="reveal"><span class="tag">contact us</span><h2 class="type">Say hello</h2></div>
+      <div class="contact-grid reveal">
+        <a href="https://wa.me/qr/TC26VTLGEKRXN1" target="_blank" rel="noopener"><small>whatsapp</small><span>Message us →</span></a>
+        <a href="https://www.instagram.com/thegoldenchaiclub/" target="_blank" rel="noopener"><small>instagram</small><span>@thegoldenchaiclub →</span></a>
+        <a href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener"><small>membership</small><span>Apply to join →</span></a>
       </div>
     </div>
   </section>
 </main>
-
 <footer>
   <div class="wrap">
-    <a class="logo" href="#">The Golden <span>Chai</span> Club</a>
-    <div>A community for women · Dubai · <a href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply to join</a></div>
-    <div>© <span id="yr">2026</span> The Golden Chai Club</div>
+    <span>© <span class="yr">2026</span> The Golden Chai Club · Dubai</span>
+    <span><a href="story.html">Meet the founder</a> · <a href="index.html#events">Events</a> · <a href="https://www.instagram.com/thegoldenchaiclub/" target="_blank" rel="noopener">Instagram</a> · <a href="https://form.jotform.com/263192337664059" target="_blank" rel="noopener">Apply</a></span>
   </div>
 </footer>
-
-<dialog id="lightbox" aria-label="Photo viewer">
-  <button type="button" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
-  <img alt="">
-</dialog>
-
-<script>
-  // Header style on scroll
-  const header = document.getElementById('top');
-  const onScroll = () => header.classList.toggle('scrolled', scrollY > 40);
-  addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
-  // Hide events whose date has passed; highlight the next one
-  const today = new Date(); today.setHours(0,0,0,0);
-  const events = [...document.querySelectorAll('.event')];
-  let shown = 0;
-  events.forEach(ev => {
-    const d = new Date(ev.dataset.date + 'T23:59:59');
-    if (d < today) { ev.remove(); return; }
-    if (shown === 0) { ev.classList.add('soon'); ev.querySelector('.tag').textContent = 'Next up · Limited spaces'; }
-    shown++;
-  });
-  if (!shown) document.getElementById('noEvents').style.display = 'block';
-
-  // Reveal on scroll
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Lightbox
-  const lb = document.getElementById('lightbox');
-  document.getElementById('masonry').addEventListener('click', e => {
-    const img = e.target.closest('img'); if (!img) return;
-    lb.querySelector('img').src = img.src; lb.querySelector('img').alt = img.alt; lb.showModal();
-  });
-  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
+<script src="site.js"></script>
 </body>
 </html>
